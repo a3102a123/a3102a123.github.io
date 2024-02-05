@@ -1,0 +1,327 @@
+/*basic*/
+:root{
+    --header-hight:3.525rem;
+    --footer-hight:6rem;
+}
+body{
+    position: relative;
+    z-index: -3;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+body a{
+    color: #67b0d1;
+}
+body a:hover{
+    text-decoration: none;
+    color : #428bca;
+}
+body .navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: #428bca;
+    padding: 0.5rem 4rem;
+}
+body .navbar a{
+    color: #f2f7f8;
+}
+body .navbar a.navbar-brand{
+    color: black;
+}
+body .container-fluid{
+    position: relative;
+    z-index: -2;
+    background-color: #f2f7f8;
+    padding:  var(--header-hight) 2rem 0 2rem;
+}
+body .mobile_overflow_container{
+    position: relative;
+    z-index: -3;
+}
+body .container-fluid .row{
+    margin: 0;
+}
+body .container-fluid .row .col-6{
+    padding: 0;
+}
+.main-block{
+    width: 100%;
+    height: 100%;
+}
+.main-block.container{
+    width: calc(100% - 5rem);
+    max-width: initial;
+    margin: 1rem 2.5rem;
+}
+.title{
+    color:#66bfbf;
+    font-size: 3rem;
+    margin: 2rem ;
+}
+.material-icons.MyIcons{
+    color: #EC9A29;
+    font-size: 3rem;
+}
+/**footer**/
+.footer{
+    display: flex;
+    width: 100%;
+    height: var(--footer-hight);
+    background-color: #428bca;
+}
+.footer .copy_right{
+    color: #f2f7f8;
+    text-align: center;
+    margin: auto;
+}
+/**font**/
+.ch_font{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.en_title{
+    font-family: 'Orbitron', sans-serif;
+}
+.en_font{
+    font-family: 'Ubuntu', sans-serif;
+}
+.en_content_font{
+    font-family: 'Ultra', serif;
+}
+.en_hand_font{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+/*Education*/
+.info{
+    background: linear-gradient(125deg, #f2f7f8 50%, #143642 50%);
+}
+.education{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.education > .title{
+    /* width: 100%; */
+    height: calc(25% - 4rem);
+    z-index: 2;
+}
+.education > .title > .reverse{
+    text-align: right;
+    color: #B6CEB7;
+    /* transform:scaleY(-1);
+    transform:scaleX(-1); */
+}
+.education > .block_container{
+    position: relative;
+    height: 75%;
+}
+.education .left_block{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+}
+.education .right_block{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+/*border can't display QQ*/
+.school_block{
+    position: relative;
+    display:  flex;
+    width: 80%;
+    flex-direction: column;
+    margin: 2rem;
+    border: 5px transparent solid;
+    border-radius: 15px;
+    background-clip: padding-box;
+    background-color: #f2f7f8;
+}
+.school_block.dummy{
+    display: none;
+}
+.school_block::after{
+    position: absolute;
+    top: -5px; bottom: -5px;
+    left: -5px; right: -5px;
+    content: '';
+    z-index: -1;
+    border-radius: 15px;
+}
+.school_block > a{
+    display: inline-flex;
+    flex-direction: column;
+}
+.school_block > div, .school_block > a > div{
+    margin: 0 2rem;
+}
+.left_block > .school_block{
+    align-self: flex-start;
+    box-shadow: 10px 10px 25px rgb(66 139 202 / 70%);
+}
+.left_block > .school_block::after{
+    background: linear-gradient( 145deg, lightskyblue, 40%, #428bca 60%);
+}
+.right_block > .school_block{
+    align-self: flex-end;
+    box-shadow: -10px 10px 25px rgb(66 139 202 / 70%);
+}
+.right_block > .school_block::after{
+    background: linear-gradient( -145deg, lightskyblue, 40%, #428bca 60%);
+}
+.school_block .school{
+    color: #428bca;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+.school_block .date{
+    color: #67b0d1;
+    font-size: 1.5rem;
+    align-self: flex-end;
+}
+.school_block .major{
+    color: #67b0d1;
+    font-weight: 600;
+    border-top: 2px black solid;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+/**block seperate bar style**/
+.bar_wrapper{
+    width: calc(100% - 2rem);
+    height: 100%;
+    position: absolute;
+}
+.bar_wrapper > .row{
+    height: calc((100% - var(--header-hight)) / 4);
+    margin-left: -2rem !important;
+    border-top: 3px black solid;
+}
+.bar_wrapper > .row:first-child{
+    border-top: none;
+}
+/*Research*/
+/*RWD Mobile*/
+@media(max-width:1024px){
+    body{
+        width: 100%;
+        overflow-x: hidden !important;
+    }
+    .mobile_overflow_container{
+        overflow-y: scroll !important;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .col-6{
+        max-width: 100%;
+    }
+    body .navbar{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .navbar-toggler{
+        display: none;
+    }
+    .navbar-collapse{
+        display: inline-flex !important;
+        justify-content: flex-end;
+    }
+    .navbar-nav{
+        display: inline-flex;
+        flex-direction: row;
+        margin-right: 0 !important;
+    }
+    .navbar-nav .nav-item{
+        margin-right: 2rem;
+    }
+    .education .left_block{
+        width: 100%;
+        flex-grow: 1;
+        justify-content: space-around;
+    }
+    .education .right_block{
+        width: 100%;
+    }
+    .school_block{
+        width: 100%;
+        align-self: center !important;
+    }
+    .school_block.dummy{
+        display: flex;
+        opacity: 0.0;
+    }
+    .education .right_block{
+        position: absolute;
+    }
+}
+/*Animation*/
+.flyin_animation{
+    animation-name: FlyInLeft;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.5,.5,.25,1);
+    animation-iteration-count: 1;
+}
+.flyin_animation_r{
+    animation-name: FlyInRight;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.5,.5,.25,1);
+    animation-iteration-count: 1;
+}
+.bar_animation{
+    animation-name: BarProgress;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+.card_animation{
+    animation-name: CardRotation;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+@keyframes FlyInLeft{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+@keyframes FlyInRight{
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 0%;
+    }
+}
+@keyframes BarProgress{
+    0%{
+        margin-right: 100%;
+    }
+    100%{
+        margin-right: 2rem;
+    }
+}
+@keyframes CardRotation{
+    0%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(360deg);
+    }
+}
+/*Color*/
+/*淺藍 : #67b0d1*/
+/*青藍(偏綠淺) : #66bfbf*/
+/*青藍(偏綠深) : #28c3ab*/
+/*藍 : #428bca*/
+/*淺灰 : #f2f7f8*/
