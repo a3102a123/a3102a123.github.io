@@ -105,6 +105,9 @@ body .container-fluid .row .col-6{
     /* width: 100%; */
     height: calc(25% - 4rem);
     z-index: 2;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .education > .title > .reverse{
     text-align: right;
