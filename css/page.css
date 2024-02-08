@@ -1,5 +1,8 @@
 /*RWD Mobile*/
 @media(max-width:1024px){
+    tw-story{
+        padding: 5% 10% !important;
+    }
     tw-passage{
         display: inline-flex !important;
         flex-direction: column;
@@ -11,20 +14,28 @@
     tw-passage hr{
         width: 100%;
     }
-    tw-passage tw-expression{
-        margin-bottom: 1rem;
+    tw-passage tw-expression,
+    tw-passage tw-link{
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
     }
     tw-passage br{
         display: none;
     }
+    tw-passage img{
+        width: 100%;
+        max-width: 100%;
+    }
     .title{
         text-align: center;
     }
-    /* tw-passage tw-hook{
-        margin-left: 2rem;
-    } */
-    /* tw-passage > img{
-        width: 100%;
-        height: 100%;
-    } */
+    tw-hook,tw-expression[type="variable"]{
+        display: contents !important;
+    }
+    /* RPG */
+    b.room_name{
+        margin-bottom: 1rem;
+    }
 }

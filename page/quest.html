@@ -25,12 +25,18 @@ display : inline-block;
 
 tw-icon{
  	display: None;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Begin" tags="" position="125,375" size="100,100">[[初級-&gt;初級]]
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*setTimeout(function() {
+  var url = $('iframe').attr('src')
+  url = url+'&autoplay=1';
+  $('iframe').attr('src', url)
+}, 5000);*/</script><tw-passagedata pid="1" name="Begin" tags="" position="125,375" size="100,100">[[初級-&gt;初級]]
 [[進階-&gt;進階]]
-(set: $score to 0)</tw-passagedata><tw-passagedata pid="2" name="初級" tags="" position="275,275" size="100,100">請選出標題日文所對應的正確中文意思
+(set: $score to 0)
+(set: $important to (css:&quot;color:yellow&quot;))</tw-passagedata><tw-passagedata pid="2" name="初級" tags="" position="275,275" size="100,100">請選出標題日文所對應的正確中文意思
 &lt;img src=&quot;images/title.jpg&quot; /&gt;
 (君日本語本当上手)
-[[第一題-&gt;Quest1]]</tw-passagedata><tw-passagedata pid="3" name="進階" tags="" position="125,575" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="Quest1" tags="" position="400,275" size="100,100">&lt;b class=&quot;title&quot;&gt;題目: 風邪&lt;/b&gt;
+[[第一題-&gt;Quest1]]</tw-passagedata><tw-passagedata pid="3" name="進階" tags="" position="275,650" size="100,100">請選出以下歌詞中$important[黃色字體]所對應的正確中文意思
+[[第一題-&gt;Quest1_進階]]</tw-passagedata><tw-passagedata pid="4" name="Quest1" tags="" position="400,275" size="100,100">&lt;b class=&quot;title&quot;&gt;題目: 風邪&lt;/b&gt;
 &lt;img src=&quot;images/1.png&quot; /&gt;
 &lt;hr&gt;
 (link: &quot;(1) 中邪&quot;)[
@@ -240,7 +246,93 @@ tw-icon{
 ]
 &lt;!--[[End]]--&gt;</tw-passagedata><tw-passagedata pid="17" name="End" tags="" position="525,525" size="100,100">&lt;b class=&quot;title&quot;&gt;恭喜你答對題數為&lt;/b&gt;
 &lt;h1&gt;&lt;div class=&quot;imp&quot;&gt;$score&lt;/div&gt;&lt;div class=&quot;sm_txt&quot;&gt;&amp;nbsp;題&lt;/div&gt;&lt;/h1&gt;
-[[再接再厲(回主選單)-&gt;Begin]]</tw-passagedata></tw-storydata>
+[[再接再厲(回主選單)-&gt;Begin]]</tw-passagedata><tw-passagedata pid="18" name="Quest1_進階" tags="" position="400,650" size="100,100">&lt;iframe width=&quot;0&quot; height=&quot;0&quot;
+src=&quot;https://www.youtube.com/embed/oZpYEEcvu5I?start=46&amp;end=56&amp;loop=1&amp;playlist=oZpYEEcvu5I&amp;autoplay=1&quot; allow=&quot;autoplay&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&quot;何十回の夜を過ごしたって$important[得られぬ]ような&quot;
+&quot;愛してるを並べてみて&quot;
+(link: &quot;(1) 能夠獲得&quot;)[
+(go-to: &quot;Quest2_進階&quot;)
+]
+(link: &quot;(2) 無法獲得&quot;)[
+(set: $score to $score + 1)
+(go-to: &quot;Quest2_進階&quot;)
+]
+(link: &quot;(3) 獲得&quot;)[
+(go-to: &quot;Quest2_進階&quot;)
+]
+(link: &quot;(4) 得分&quot;)[
+(go-to: &quot;Quest2_進階&quot;)
+]
+&lt;!--[[Quest2_進階]]--&gt;</tw-passagedata><tw-passagedata pid="19" name="Quest2_進階" tags="" position="525,650" size="100,100">&lt;iframe width=&quot;0&quot; height=&quot;0&quot;
+src=&quot;https://www.youtube.com/embed/OIBODIPC_8Y?start=124&amp;end=134&amp;loop=1&amp;playlist=OIBODIPC_8Y&amp;autoplay=1&quot; allow=&quot;autoplay&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&quot;まるで$important[御伽の話]終わり迎えた証&quot;
+&quot;私を変えた出会い百分の一の旅路&quot;
+(link: &quot;(1) 童話故事&quot;)[
+(set: $score to $score + 1)
+(go-to: &quot;Quest3_進階&quot;)
+]
+(link: &quot;(2) 重要的話語&quot;)[
+(go-to: &quot;Quest3_進階&quot;)
+]
+(link: &quot;(3) 光怪陸離&quot;)[
+(go-to: &quot;Quest3_進階&quot;)
+]
+(link: &quot;(4) 囚犯的遺言&quot;)[
+(go-to: &quot;Quest3_進階&quot;)
+]
+&lt;!--[[Quest3_進階]]--&gt;</tw-passagedata><tw-passagedata pid="20" name="Quest3_進階" tags="" position="650,650" size="100,100">&lt;iframe width=&quot;0&quot; height=&quot;0&quot;
+src=&quot;https://www.youtube.com/embed/cbqvxDTLMps?start=98&amp;end=109&amp;loop=1&amp;playlist=cbqvxDTLMps&amp;autoplay=1&quot; allow=&quot;autoplay&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&quot;僕ら見つけあって手繰りあって同じ空&quot;
+&quot;輝くのだって二人だって$important[約束]した&quot;
+(link: &quot;(1) 約束&quot;)[
+(go-to: &quot;Quest4_進階&quot;)
+]
+(link: &quot;(2) 束縛&quot;)[
+(go-to: &quot;Quest4_進階&quot;)
+]
+(link: &quot;(3) 約定&quot;)[
+(set: $score to $score + 1)
+(go-to: &quot;Quest4_進階&quot;)
+]
+(link: &quot;(4) 連結&quot;)[
+(go-to: &quot;Quest4_進階&quot;)
+]
+&lt;!--[[Quest4_進階]]--&gt;</tw-passagedata><tw-passagedata pid="21" name="Quest4_進階" tags="" position="775,650" size="100,100">&lt;iframe width=&quot;0&quot; height=&quot;0&quot;
+src=&quot;https://www.youtube.com/embed/dLlD-dZNACM?start=161&amp;end=173&amp;loop=1&amp;playlist=dLlD-dZNACM&amp;autoplay=1&quot; allow=&quot;autoplay&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&quot;どうやら総ては叶わない&quot;
+&quot;$important[叶わない]ならばあなたになりたい&quot;
+&quot;星は砕け光る&quot;
+(link: &quot;(1) 達成&quot;)[
+(go-to: &quot;Quest5_進階&quot;)
+]
+(link: &quot;(2) 說話&quot;)[
+(go-to: &quot;Quest5_進階&quot;)
+]
+(link: &quot;(3) 葉子&quot;)[
+(go-to: &quot;Quest5_進階&quot;)
+]
+(link: &quot;(4) 無法實現&quot;)[
+(set: $score to $score + 1)
+(go-to: &quot;Quest5_進階&quot;)
+]
+&lt;!--[[Quest5_進階]]--&gt;</tw-passagedata><tw-passagedata pid="22" name="Quest5_進階" tags="" position="900,650" size="100,100">&lt;iframe width=&quot;0&quot; height=&quot;0&quot;
+src=&quot;https://www.youtube.com/embed/by4SYYWlhEs?start=60&amp;end=69&amp;loop=1&amp;playlist=by4SYYWlhEs&amp;autoplay=1&quot; allow=&quot;autoplay&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&quot;いつだってチックタックと鳴る世界で何度だってさ&quot;
+&quot;触れる心無い$important[言葉]うるさい声に涙が零れそうでも&quot;
+(link: &quot;(1) 話語&quot;)[
+(set: $score to $score + 1)
+(go-to: &quot;End&quot;)
+]
+(link: &quot;(2) 言葉&quot;)[
+(go-to: &quot;End&quot;)
+]
+(link: &quot;(3) 葉子&quot;)[
+(go-to: &quot;End&quot;)
+]
+(link: &quot;(4) 用詞&quot;)[
+(go-to: &quot;End&quot;)
+]
+&lt;!--[[End]]--&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
